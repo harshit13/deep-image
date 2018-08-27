@@ -145,27 +145,27 @@ if __name__ == '__main__':
     )
     model.add(Dropout(0.2))
     model.add(Convolution2D(
-        32, (3, 3), activation='relu', padding='same'
+        32, (3, 3), activation='elu', padding='same'
         )
     )
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Convolution2D(
-        64, (3, 3), activation='relu', padding='same'
+        64, (3, 3), activation='elu', padding='same'
         )
     )
     model.add(Dropout(0.2))
     model.add(Convolution2D(
-        64, (3, 3), activation='relu', padding='same'
+        64, (3, 3), activation='elu', padding='same'
         )
     )
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Convolution2D(
-        128, (3, 3), activation='relu', padding='same'
+        128, (3, 3), activation='elu', padding='same'
         )
     )
     model.add(Dropout(0.2))
     model.add(Convolution2D(
-        128, (3, 3), activation='relu', padding='same'
+        128, (3, 3), activation='elu', padding='same'
         )
     )
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -174,7 +174,7 @@ if __name__ == '__main__':
     model.add(Flatten())
     model.add(Dropout(0.2))
     model.add(Dense(
-        1024, activation='relu', kernel_constraint=maxnorm(3)
+        1024, activation='elu', kernel_constraint=maxnorm(3)
         )
     )
     model.add(Dropout(0.2))
